@@ -1,0 +1,46 @@
+<section class="home">
+  <img src="../../assets/back.jpg" >
+  
+  <div class="homecontent">
+ 
+<div id="registration-form">
+  <div class='fieldset'>
+    <div id="slider">
+    <legend>Show Player</legend>
+    <form #form = ngForm (ngSubmit)="showPlayer()">
+       
+      <div class="form-group" >
+        <label for="playerName">Player Id:</label>
+        <input type="text" class="form-control" id="playerId" placeholder="Enter player Id" name="playerId" 
+           [(ngModel)]="player.playerId" >
+          {{player.playerId}}   
+      </div>
+        
+      <button type="submit" class="btn btn-info" >Show Player</button>
+
+      <table class="table"> 
+        <tr>
+        <th>Id</th>
+        <th>Player Name</th>
+        <th>Player Bidding Budget</th>
+        <th>Player Team Name</th>
+        </tr>
+        <tr *ngFor="let players of players">
+          <td>{{players.playerId}}</td>
+          <td>{{players.playerName}}</td>
+          <td>{{players.playerBiddingBudget}}</td>
+          <td>{{players.playerTeamName}}</td>
+          
+      </table>
+      
+      </form>
+    
+  </div>
+  </div>
+</div>
+  </div>
+</section>
+
+
+
+

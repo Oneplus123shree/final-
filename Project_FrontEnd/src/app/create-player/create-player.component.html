@@ -1,0 +1,45 @@
+<section class="home">
+  <img src="../../assets/back.jpg" >
+  
+  <div class="homecontent">
+ 
+<div id="registration-form">
+  <div class='fieldset'>
+    <div id="slider">
+    <legend>Create Player</legend>
+    <form  (ngSubmit)="createPlayer()">
+       
+      <div class="form-group">
+        <label for="playername">Player Name:</label>
+        <input type="text" class="form-control" id="playername" placeholder="Enter player name" name="playername" 
+           [(ngModel)]="player.playerName" [ngModelOptions]="{standalone: true}">
+      </div>
+
+      <div class="form-group" >
+        <label for="playerBuddingBudget">Player Bidding Budget</label>
+        <input type="number" class="form-control" id="playerBuddingBudget"  name="playerBuddingBudget" 
+          [(ngModel)]="player.playerBiddingBudget" [ngModelOptions]="{standalone: true}">
+      </div>
+
+        <div class="input-group input-group-sm-mb-3">
+          <select [(ngModel)]="player.playerTeamName" [ngModelOptions]="{standalone: true}">
+           <label>Select </label>
+            <option value="0">Check Avalibility</option>
+        <option *ngFor="let team of teams" [value]="team">{{team}}</option>
+        <option>NOT APPLICATION </option>
+          </select>
+        </div>
+
+     
+      <button type="submit" class="btn btn-info">Create Player</button>
+    </form>
+  </div>
+  </div>
+</div>
+</div><div>
+  </div>
+</section>
+
+
+
+

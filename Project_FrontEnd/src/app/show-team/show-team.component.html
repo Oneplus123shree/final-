@@ -1,0 +1,47 @@
+<section class="home">
+  <img src="../../assets/back.jpg" >
+  
+  <div class="homecontent">
+ 
+<div id="registration-form">
+  <div class='fieldset'>
+    <div id="slider">
+    <legend>Show Team</legend>
+    <div class="input-group input-group-sm-mb-3">
+      <select #playerTeamName style="margin-right: 50px;">
+        <option value="0">--select teamname--</option>
+        <option *ngFor="let team of teams" [value]="team">{{team}}</option>
+        <option value="1">NA</option>
+  
+      </select>
+
+      <button (click)="showTeam(playerTeamName.value)" class="button">Show Team</button>
+
+      <table class="table"> 
+        <tr>
+        <th>Id</th>
+        <th>Player Name</th>
+        <th>Plaayer Bidding Budget</th>
+        <th>Player Team Name</th>
+        </tr>
+        <tr *ngFor="let players of players">
+          <td>{{players.playerId}}</td>
+          <td>{{players.playerName}}</td>
+          <td>{{players.playerBiddingBudget}}</td>
+          <td>{{players.playerTeamName}}</td>
+          
+      </table>
+    </div>
+    
+  </div>
+  </div>
+</div>
+
+</div>
+</section>
+
+
+
+
+
+

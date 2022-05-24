@@ -1,0 +1,33 @@
+<section class="home">
+  <img src="../../assets/back.jpg" >
+  
+  <div class="homecontent">
+ 
+<div id="registration-form">
+  <div class='fieldset'>
+    <div id="slider">
+    <legend>Create Team</legend>
+    <form (ngSubmit)="createTeam()">
+      <div class="form-group">
+          <small class="text-danger">{{msg}}</small>
+        <label for="TeamName">Team Name</label>
+        <input type="text" class="form-control" id="TeamName"  placeholder="Enter Team Name" name="TeamName"
+         [(ngModel)]="team.teamName" [ngModelOptions]="{standalone: true}">
+      </div>
+      <div class="form-group">
+        <label for="TeamBudget">Team Budget</label>
+        <input type="number" class="form-control" id="TeamBudget" placeholder="Team Budget" name ="TeamBudget"
+        [(ngModel)]="team.teamMaxBudget" [ngModelOptions]="{standalone: true}">
+      </div>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Create Team</button>
+    </form>
+  </div>
+  </div>
+</div>
+
+  </div>
+  </section>
